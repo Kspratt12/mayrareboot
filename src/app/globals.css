@@ -13,7 +13,7 @@
   --color-champagne: #C9A96E;
   --color-champagne-light: #D4BC8E;
   --color-champagne-dark: #B08F50;
-  --color-charcoal: #2C2C2C;
+  --color-charcoal: #393533;
   --color-charcoal-light: #4A4A4A;
   --color-warm-gray: #7A7268;
   --color-warm-gray-light: #9E958B;
@@ -200,18 +200,18 @@ h5 { font-size: var(--text-h5); }
 
 /* Section Spacing */
 .section-padding {
-  padding: 4.5rem 1.5rem;
+  padding: 3.5rem 1.5rem;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding: 5.5rem 2rem;
+    padding: 4.5rem 2rem;
   }
 }
 
 @media (min-width: 1280px) {
   .section-padding {
-    padding: 7rem 2rem;
+    padding: 5.5rem 2rem;
   }
 }
 

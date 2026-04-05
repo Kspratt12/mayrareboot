@@ -158,7 +158,7 @@ export default function HomePage() {
       {/* ============================================ */}
       {/* 2. QUICK BOOKING STRIP */}
       {/* ============================================ */}
-      <section className="relative bg-[#1c1c1c] py-10 md:py-12 overflow-hidden">
+      <section className="relative bg-charcoal py-10 md:py-12 overflow-hidden">
         {/* Subtle gradient accent */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-champagne/40 to-transparent" />
 

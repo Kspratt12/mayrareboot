@@ -37,11 +37,11 @@ export default function HeroSlider() {
         </div>
       ))}
       {/* Clean overlay - dark enough to read, light enough to see image */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/15 z-[1]" />
 
       {/* Content */}
       <div className="relative z-10 container-premium w-full pt-32 pb-20">
-        <div className="max-w-2xl" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
+        <div className="max-w-2xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.4)" }}>
           {/* Trust badge */}
           <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 mb-7 animate-fade-in-up" style={{ textShadow: "none" }}>
             <div className="flex items-center gap-0.5">
