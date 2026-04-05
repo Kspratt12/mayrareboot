@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import VideoShowcase from "@/components/VideoShowcase";
 import ScrollReveal from "@/components/ScrollReveal";
+import HeroSlider from "@/components/HeroSlider";
 
 const serviceCategories = [
   {
@@ -150,56 +151,9 @@ export default function HomePage() {
   return (
     <>
       {/* ============================================ */}
-      {/* SECTION 1: PREMIUM HERO */}
+      {/* SECTION 1: PREMIUM HERO SLIDER */}
       {/* ============================================ */}
-      <section className="relative min-h-screen flex items-center">
-        <div className="absolute inset-0">
-          <Image
-            src="/hero-1.png"
-            alt="Premium skincare treatment at Skin Reboot Spa Clinic in Cary, NC"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/40 to-transparent" />
-        </div>
-        <div className="relative z-10 container-premium w-full pt-32 pb-20">
-          <div className="max-w-2xl">
-            <p className="overline !text-champagne-light mb-6 animate-fade-in-up">
-              Premium Skincare in Cary, NC
-            </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-heading)] font-medium text-white leading-[1.1] mb-6 animate-fade-in-up animate-delay-100">
-              Where Science Meets{" "}
-              <span className="italic text-champagne-light">Skin Wellness</span>
-            </h1>
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-lg animate-fade-in-up animate-delay-200">
-              Corrective facials, body treatments, waxing, and eye enhancements
-              delivered by internationally certified estheticians. Real expertise.
-              Visible results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-              <a
-                href="https://mayrasalonga.glossgenius.com/services"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-champagne text-center"
-              >
-                Book Your Treatment
-              </a>
-              <Link href="/services" className="btn-secondary !border-white/40 !text-white hover:!bg-white/10 text-center">
-                Explore Services
-              </Link>
-            </div>
-          </div>
-        </div>
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-3 bg-white/50 rounded-full" />
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       {/* ============================================ */}
       {/* SECTION 2: TRUST STRIP */}
@@ -240,7 +194,7 @@ export default function HomePage() {
       <section className="section-padding bg-background">
         <div className="container-premium">
           <ScrollReveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="overline mb-4">What We Offer</p>
             <h2 className="font-[family-name:var(--font-heading)]">
               Our Signature Services
@@ -429,7 +383,7 @@ export default function HomePage() {
       {/* ============================================ */}
       <section className="section-padding bg-cream">
         <div className="container-premium">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="overline mb-4">Signature Experiences</p>
             <h2 className="font-[family-name:var(--font-heading)]">
               Featured Treatments
@@ -494,7 +448,7 @@ export default function HomePage() {
       {/* ============================================ */}
       <section className="section-padding bg-background">
         <div className="container-premium">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="overline mb-4">Curated Skincare</p>
             <h2 className="font-[family-name:var(--font-heading)]">
               Professional Products
@@ -546,7 +500,7 @@ export default function HomePage() {
       {/* ============================================ */}
       <section className="section-padding bg-cream">
         <div className="container-premium">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="overline mb-4">Our Team</p>
             <h2 className="font-[family-name:var(--font-heading)]">
               Meet Your Estheticians
@@ -608,7 +562,7 @@ export default function HomePage() {
       <section className="section-padding bg-background">
         <div className="container-premium">
           {/* Google Rating Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="overline mb-4">Client Experiences</p>
             <h2 className="font-[family-name:var(--font-heading)]">
               What Our Clients Say
@@ -805,7 +759,7 @@ export default function HomePage() {
       {/* ============================================ */}
       <section className="section-padding bg-background">
         <div className="container-premium">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="overline mb-4">Real Results</p>
             <h2 className="font-[family-name:var(--font-heading)]">
               Transformations
