@@ -156,34 +156,66 @@ export default function HomePage() {
       <HeroSlider />
 
       {/* ============================================ */}
-      {/* 2. TRUST STRIP */}
+      {/* 2. QUICK BOOKING STRIP */}
       {/* ============================================ */}
-      <section className="bg-charcoal py-5">
+      <section className="bg-charcoal py-8 md:py-10">
         <div className="container-premium">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
-            <span className="text-[11px] font-medium tracking-[0.15em] uppercase text-white/50">
-              CIBTAC Certified
-            </span>
-            <span className="text-white/20">|</span>
-            <span className="text-[11px] font-medium tracking-[0.15em] uppercase text-white/50">
-              ITEC Qualified
-            </span>
-            <span className="text-white/20 hidden sm:inline">|</span>
-            <span className="text-[11px] font-medium tracking-[0.15em] uppercase text-white/50">
-              International Expertise
-            </span>
-            <span className="text-white/20 hidden md:inline">|</span>
-            <span className="text-[11px] font-medium tracking-[0.15em] uppercase text-white/50 hidden md:inline">
-              Products from 6 Countries
-            </span>
-            <span className="text-white/20 hidden lg:inline">|</span>
-            <span className="text-[11px] font-medium tracking-[0.15em] uppercase text-white/50 hidden lg:inline">
-              5.0 ★ on Google (353 Reviews)
-            </span>
-            <span className="text-white/20 hidden lg:inline">|</span>
-            <span className="text-[11px] font-medium tracking-[0.15em] uppercase text-white/50 hidden lg:inline">
-              Trusted Across the Triangle
-            </span>
+          <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 md:p-8">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+              {/* Left: heading */}
+              <div className="shrink-0">
+                <h2 className="font-[family-name:var(--font-heading)] text-xl md:text-2xl text-white">
+                  Book Your Service
+                </h2>
+                <p className="text-sm text-white/40 mt-1">Select a category to get started</p>
+              </div>
+
+              {/* Center: service pills */}
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: "Facials", href: "/facials", from: "From $150" },
+                  { label: "Body Treatments", href: "/body-treatments", from: "From $110" },
+                  { label: "Eye Enhancements", href: "/eye-enhancements", from: "From $25" },
+                  { label: "Waxing", href: "/waxing", from: "From $10" },
+                ].map((svc) => (
+                  <Link
+                    key={svc.label}
+                    href={svc.href}
+                    className="group flex items-center gap-3 bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 hover:border-champagne/30 rounded-xl px-5 py-3 transition-all"
+                  >
+                    <span className="text-sm font-medium text-white group-hover:text-champagne-light transition-colors">{svc.label}</span>
+                    <span className="text-xs text-white/30">{svc.from}</span>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Right: CTA */}
+              <a
+                href="https://mayrasalonga.glossgenius.com/services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-champagne shrink-0 text-center !py-3"
+              >
+                Book Now
+              </a>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 pt-6 border-t border-white/[0.06]">
+              {[
+                { icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z", text: "CIBTAC & ITEC Certified" },
+                { icon: "M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z", text: "5-Star Client Experience" },
+                { icon: "M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0016.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.01 6.01 0 01-4.27 1.772 6.01 6.01 0 01-4.27-1.772", text: "Award-Winning Clinic" },
+                { icon: "M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418", text: "Products from 6 Countries" },
+              ].map((item) => (
+                <div key={item.text} className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-champagne/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
+                  </svg>
+                  <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-white/40">{item.text}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
