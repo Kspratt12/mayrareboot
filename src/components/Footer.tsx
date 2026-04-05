@@ -27,14 +27,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-11 h-11 rounded-full overflow-hidden relative bg-white/10 border border-white/20" style={{ clipPath: "circle(50%)" }}>
+              <div className="w-11 h-11 rounded-full overflow-hidden relative border border-white/20">
                 <Image
-                  src="/logo.png"
+                  src="/logo-transparent.png"
                   alt="Skin Reboot Spa Clinic"
                   width={200}
                   height={200}
-                  className="w-[130%] h-[130%] object-cover brightness-0 invert opacity-90 absolute -top-[3%] -left-[15%]"
-                  style={{ objectPosition: "center 35%" }}
+                  className="w-full h-full object-contain brightness-0 invert opacity-90"
                 />
               </div>
               <div>
