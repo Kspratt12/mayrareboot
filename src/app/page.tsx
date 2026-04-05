@@ -749,50 +749,52 @@ export default function HomePage() {
       {/* ============================================ */}
       <section className="py-14 md:py-16 bg-charcoal text-white">
         <div className="container-premium">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-10">
-            {/* Award images - compact */}
-            <div className="grid grid-cols-2 gap-4 lg:w-2/5 shrink-0">
-              <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-white/5">
-                <Image src="/2025-award.png" alt="2025 Quality Business Award" fill className="object-contain p-2" sizes="(max-width: 768px) 50vw, 20vw" />
-              </div>
-              <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-white/5">
-                <Image src="/gala-night-award.png" alt="FILAMCCNC Gala Night Award" fill className="object-contain p-2" sizes="(max-width: 768px) 50vw, 20vw" />
+          <div className="flex flex-col lg:flex-row lg:items-center gap-12 max-w-4xl mx-auto">
+            {/* Single clean award */}
+            <div className="shrink-0 mx-auto lg:mx-0">
+              <div className="relative w-[200px] h-[280px] rounded-xl overflow-hidden bg-white shadow-lg">
+                <Image src="/2025-award.png" alt="#1 Best Rated Day Spa 2025" fill className="object-contain p-3" sizes="200px" />
               </div>
             </div>
 
-            {/* Awards + Press - compact */}
-            <div className="flex-1 space-y-6">
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 bg-white/5 rounded-lg p-5">
-                <div className="shrink-0 w-10 h-10 rounded-full bg-champagne/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-champagne" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-[family-name:var(--font-heading)] text-base text-white">Most Outstanding Beauty Therapist Student</h4>
-                  <p className="text-xs text-white/50">CMM Monita Beauty Academy HK &middot; 2009</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4 bg-white/5 rounded-lg p-5">
-                <div className="shrink-0 w-10 h-10 rounded-full bg-champagne/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-champagne" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-[family-name:var(--font-heading)] text-base text-white">Most Outstanding Esthetician</h4>
-                  <p className="text-xs text-white/50">FILAMCCNC &middot; 2023</p>
-                </div>
-              </div>
-            </div>
-
+            {/* Awards text + Press */}
+            <div className="flex-1 space-y-5">
               <div>
+                <p className="overline !text-champagne-light mb-2">Recognition</p>
+                <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl text-white">
+                  Award-Winning Care
+                </h2>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-champagne shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg>
+                  <p className="text-sm text-white/80">#1 Best Rated Day Spa in Cary &middot; Quality Score 95%+ &middot; 2025</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-champagne shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg>
+                  <p className="text-sm text-white/80">Most Outstanding Esthetician &middot; FILAMCCNC &middot; 2023</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-champagne shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg>
+                  <p className="text-sm text-white/80">Most Outstanding Beauty Therapist Student &middot; CMM HK &middot; 2009</p>
+                </div>
+              </div>
+
+              <div className="pt-4">
                 <p className="text-xs font-medium tracking-[0.15em] uppercase text-white/30 mb-3">As Seen In</p>
                 <div className="flex flex-wrap gap-3">
-                  <a href="https://voyageraleigh.com/interview/rising-stars-meet-mayra-salonga-davis-of-cary-north-carolina/" target="_blank" rel="noopener noreferrer" className="bg-white/5 rounded-lg px-4 py-2.5 text-sm font-[family-name:var(--font-heading)] text-white/60 hover:text-champagne hover:bg-white/10 transition-all">Voyage Raleigh</a>
-                  <a href="https://shoutoutnorthcarolina.com/meet-mayra-salonga-davis-beauty-therapist-specialist-esthetician-esthetic-educator/" target="_blank" rel="noopener noreferrer" className="bg-white/5 rounded-lg px-4 py-2.5 text-sm font-[family-name:var(--font-heading)] text-white/60 hover:text-champagne hover:bg-white/10 transition-all">ShoutOut NC</a>
-                  <a href="https://canvasrebel.com/meet-mayra-salonga-davis/" target="_blank" rel="noopener noreferrer" className="bg-white/5 rounded-lg px-4 py-2.5 text-sm font-[family-name:var(--font-heading)] text-white/60 hover:text-champagne hover:bg-white/10 transition-all">CanvasRebel</a>
+                  <a href="https://voyageraleigh.com/interview/rising-stars-meet-mayra-salonga-davis-of-cary-north-carolina/" target="_blank" rel="noopener noreferrer" className="text-sm font-[family-name:var(--font-heading)] text-white/50 hover:text-champagne transition-colors">Voyage Raleigh</a>
+                  <span className="text-white/20">&middot;</span>
+                  <a href="https://shoutoutnorthcarolina.com/meet-mayra-salonga-davis-beauty-therapist-specialist-esthetician-esthetic-educator/" target="_blank" rel="noopener noreferrer" className="text-sm font-[family-name:var(--font-heading)] text-white/50 hover:text-champagne transition-colors">ShoutOut NC</a>
+                  <span className="text-white/20">&middot;</span>
+                  <a href="https://canvasrebel.com/meet-mayra-salonga-davis/" target="_blank" rel="noopener noreferrer" className="text-sm font-[family-name:var(--font-heading)] text-white/50 hover:text-champagne transition-colors">CanvasRebel</a>
                 </div>
               </div>
             </div>
