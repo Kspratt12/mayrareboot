@@ -59,13 +59,14 @@ export default function Navbar() {
         <nav className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div className="w-11 h-11 md:w-13 md:h-13 rounded-full overflow-hidden relative border border-stone/20">
+            <div className="w-11 h-11 md:w-13 md:h-13 overflow-hidden relative">
               <Image
                 src="/logo-transparent.png"
                 alt="Skin Reboot Spa Clinic"
                 width={200}
                 height={200}
-                className="w-full h-full object-contain"
+                className="w-[140%] h-[140%] object-cover mix-blend-multiply absolute -top-[10%] -left-[20%]"
+                style={{ objectPosition: "center 40%" }}
                 priority
               />
             </div>
