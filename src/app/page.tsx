@@ -181,14 +181,16 @@ export default function HomePage() {
           {/* Service cards grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { label: "Facials", href: "/facials", from: "$150", count: "12 treatments" },
-              { label: "Body Treatments", href: "/body-treatments", from: "$110", count: "5 treatments" },
-              { label: "Eye Enhancements", href: "/eye-enhancements", from: "$25", count: "5 services" },
-              { label: "Waxing", href: "/waxing", from: "$10", count: "Full menu" },
+              { label: "Facials", from: "$150", count: "12 treatments" },
+              { label: "Body Treatments", from: "$110", count: "5 treatments" },
+              { label: "Eye Enhancements", from: "$25", count: "5 services" },
+              { label: "Waxing", from: "$10", count: "Full menu" },
             ].map((svc) => (
-              <Link
+              <a
                 key={svc.label}
-                href={svc.href}
+                href="https://mayrasalonga.glossgenius.com/services"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group bg-white rounded-xl p-5 border border-stone/30 hover:border-champagne/50 hover:shadow-lg transition-all duration-300"
               >
                 <p className="text-base font-semibold text-charcoal group-hover:text-champagne-dark transition-colors mb-1">
@@ -203,7 +205,7 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
 
