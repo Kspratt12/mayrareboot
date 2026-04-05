@@ -158,62 +158,70 @@ export default function HomePage() {
       {/* ============================================ */}
       {/* 2. QUICK BOOKING STRIP */}
       {/* ============================================ */}
-      <section className="bg-charcoal py-8 md:py-10">
-        <div className="container-premium">
-          <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 md:p-8">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-              {/* Left: heading */}
-              <div className="shrink-0">
-                <h2 className="font-[family-name:var(--font-heading)] text-xl md:text-2xl text-white">
+      <section className="relative bg-[#1c1c1c] py-10 md:py-12 overflow-hidden">
+        {/* Subtle gradient accent */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-champagne/40 to-transparent" />
+
+        <div className="container-premium relative z-10">
+          {/* Main booking card */}
+          <div className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-sm border border-white/[0.08] rounded-2xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+
+            {/* Top row: heading + CTA */}
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+              <div>
+                <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl !text-white">
                   Book Your Service
                 </h2>
-                <p className="text-sm text-white/40 mt-1">Select a category to get started</p>
+                <p className="text-sm text-white/50 mt-1">Select a category to explore treatments</p>
               </div>
-
-              {/* Center: service pills */}
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { label: "Facials", href: "/facials", from: "From $150" },
-                  { label: "Body Treatments", href: "/body-treatments", from: "From $110" },
-                  { label: "Eye Enhancements", href: "/eye-enhancements", from: "From $25" },
-                  { label: "Waxing", href: "/waxing", from: "From $10" },
-                ].map((svc) => (
-                  <Link
-                    key={svc.label}
-                    href={svc.href}
-                    className="group flex items-center gap-3 bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 hover:border-champagne/30 rounded-xl px-5 py-3 transition-all"
-                  >
-                    <span className="text-sm font-medium text-white group-hover:text-champagne-light transition-colors">{svc.label}</span>
-                    <span className="text-xs text-white/30">{svc.from}</span>
-                  </Link>
-                ))}
-              </div>
-
-              {/* Right: CTA */}
               <a
                 href="https://mayrasalonga.glossgenius.com/services"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-champagne shrink-0 text-center !py-3"
+                className="btn-champagne shrink-0 text-center"
               >
                 Book Now
               </a>
             </div>
 
-            {/* Trust indicators */}
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 pt-6 border-t border-white/[0.06]">
+            {/* Service cards grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
               {[
-                { icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z", text: "CIBTAC & ITEC Certified" },
-                { icon: "M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z", text: "5-Star Client Experience" },
-                { icon: "M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0016.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.01 6.01 0 01-4.27 1.772 6.01 6.01 0 01-4.27-1.772", text: "Award-Winning Clinic" },
-                { icon: "M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418", text: "Products from 6 Countries" },
-              ].map((item) => (
-                <div key={item.text} className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-champagne/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
-                  </svg>
-                  <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-white/40">{item.text}</span>
-                </div>
+                { label: "Facials", href: "/facials", from: "$150", count: "12 treatments" },
+                { label: "Body Treatments", href: "/body-treatments", from: "$110", count: "5 treatments" },
+                { label: "Eye Enhancements", href: "/eye-enhancements", from: "$25", count: "5 services" },
+                { label: "Waxing", href: "/waxing", from: "$10", count: "Full menu" },
+              ].map((svc) => (
+                <Link
+                  key={svc.label}
+                  href={svc.href}
+                  className="group relative bg-white/[0.04] hover:bg-white/[0.10] border border-white/[0.08] hover:border-champagne/40 rounded-xl p-5 transition-all duration-300"
+                >
+                  <p className="text-base font-semibold text-white group-hover:text-champagne-light transition-colors mb-1">
+                    {svc.label}
+                  </p>
+                  <p className="text-xs text-white/35">{svc.count}</p>
+                  <div className="flex items-center justify-between mt-4">
+                    <span className="text-lg font-[family-name:var(--font-heading)] font-semibold text-champagne">
+                      {svc.from}
+                    </span>
+                    <svg className="w-4 h-4 text-white/20 group-hover:text-champagne/60 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {/* Trust bar */}
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-8 pt-6 border-t border-white/[0.06]">
+              {[
+                "CIBTAC & ITEC Certified",
+                "5-Star Client Experience",
+                "Award-Winning Clinic",
+                "Products from 6 Countries",
+              ].map((text) => (
+                <span key={text} className="text-[10px] font-medium tracking-[0.15em] uppercase text-white/30">{text}</span>
               ))}
             </div>
           </div>
@@ -221,81 +229,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* 3. IMMEDIATE SOCIAL PROOF (Google + 3 Reviews) */}
-      {/* ============================================ */}
-      <section className="section-padding bg-background">
-        <div className="container-premium">
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-4 bg-white rounded-2xl px-8 py-5 shadow-sm border border-stone/20">
-              <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none">
-                <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
-                <path d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
-                <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
-                <path d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.001-.001 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
-              </svg>
-              <div className="text-left">
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 star-gold" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-2xl font-[family-name:var(--font-heading)] font-bold text-charcoal">
-                    5.0
-                  </span>
-                </div>
-                <p className="text-sm text-warm-gray mt-0.5">
-                  Based on <span className="font-medium text-charcoal">353 reviews</span> on Google
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {reviews.slice(0, 3).map((review) => (
-              <div
-                key={review.name}
-                className="bg-white rounded-xl p-8 border border-stone/10"
-              >
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-sm text-warm-gray leading-relaxed mb-6 italic">
-                  &ldquo;{review.text}&rdquo;
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-sage/15 flex items-center justify-center">
-                    <span className="text-sm font-medium text-sage-dark">
-                      {review.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-charcoal">{review.name}</p>
-                    <p className="text-xs text-warm-gray-light flex items-center gap-1">
-                      <svg className="w-3 h-3" viewBox="0 0 48 48" fill="none">
-                        <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
-                        <path d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
-                        <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
-                        <path d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.001-.001 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
-                      </svg>
-                      Google Review
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* 4. SERVICE CATEGORIES */}
+      {/* 3. SERVICE CATEGORIES */}
       {/* ============================================ */}
       <section className="section-padding bg-cream">
         <div className="container-premium">
@@ -820,25 +754,21 @@ export default function HomePage() {
       {/* ============================================ */}
       {/* 12. AWARDS */}
       {/* ============================================ */}
-      <section className="py-16 md:py-20 bg-charcoal text-white">
+      <section className="py-14 md:py-16 bg-charcoal text-white">
         <div className="container-premium">
-          <div className="text-center mb-12">
-            <p className="overline !text-champagne-light mb-3">Recognition</p>
-            <h2 className="font-[family-name:var(--font-heading)] text-white text-3xl md:text-4xl">
-              Awards & Press
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-              <Image src="/2025-award.png" alt="2025 Quality Business Award" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+          <div className="flex flex-col lg:flex-row lg:items-center gap-10">
+            {/* Award images - compact */}
+            <div className="grid grid-cols-2 gap-4 lg:w-2/5 shrink-0">
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-white/5">
+                <Image src="/2025-award.png" alt="2025 Quality Business Award" fill className="object-contain p-2" sizes="(max-width: 768px) 50vw, 20vw" />
+              </div>
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-white/5">
+                <Image src="/gala-night-award.png" alt="FILAMCCNC Gala Night Award" fill className="object-contain p-2" sizes="(max-width: 768px) 50vw, 20vw" />
+              </div>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-              <Image src="/gala-night-award.png" alt="FILAMCCNC Gala Night Award" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Awards + Press - compact */}
+            <div className="flex-1 space-y-6">
             <div className="space-y-4">
               <div className="flex items-center gap-4 bg-white/5 rounded-lg p-5">
                 <div className="shrink-0 w-10 h-10 rounded-full bg-champagne/20 flex items-center justify-center">
@@ -864,12 +794,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center">
-              <p className="text-xs font-medium tracking-[0.15em] uppercase text-white/30 mb-4">As Seen In</p>
-              <div className="flex flex-wrap gap-4">
-                <a href="https://voyageraleigh.com/interview/rising-stars-meet-mayra-salonga-davis-of-cary-north-carolina/" target="_blank" rel="noopener noreferrer" className="bg-white/5 rounded-lg px-5 py-3 text-sm font-[family-name:var(--font-heading)] text-white/60 hover:text-champagne hover:bg-white/10 transition-all">Voyage Raleigh</a>
-                <a href="https://shoutoutnorthcarolina.com/meet-mayra-salonga-davis-beauty-therapist-specialist-esthetician-esthetic-educator/" target="_blank" rel="noopener noreferrer" className="bg-white/5 rounded-lg px-5 py-3 text-sm font-[family-name:var(--font-heading)] text-white/60 hover:text-champagne hover:bg-white/10 transition-all">ShoutOut NC</a>
-                <a href="https://canvasrebel.com/meet-mayra-salonga-davis/" target="_blank" rel="noopener noreferrer" className="bg-white/5 rounded-lg px-5 py-3 text-sm font-[family-name:var(--font-heading)] text-white/60 hover:text-champagne hover:bg-white/10 transition-all">CanvasRebel</a>
+              <div>
+                <p className="text-xs font-medium tracking-[0.15em] uppercase text-white/30 mb-3">As Seen In</p>
+                <div className="flex flex-wrap gap-3">
+                  <a href="https://voyageraleigh.com/interview/rising-stars-meet-mayra-salonga-davis-of-cary-north-carolina/" target="_blank" rel="noopener noreferrer" className="bg-white/5 rounded-lg px-4 py-2.5 text-sm font-[family-name:var(--font-heading)] text-white/60 hover:text-champagne hover:bg-white/10 transition-all">Voyage Raleigh</a>
+                  <a href="https://shoutoutnorthcarolina.com/meet-mayra-salonga-davis-beauty-therapist-specialist-esthetician-esthetic-educator/" target="_blank" rel="noopener noreferrer" className="bg-white/5 rounded-lg px-4 py-2.5 text-sm font-[family-name:var(--font-heading)] text-white/60 hover:text-champagne hover:bg-white/10 transition-all">ShoutOut NC</a>
+                  <a href="https://canvasrebel.com/meet-mayra-salonga-davis/" target="_blank" rel="noopener noreferrer" className="bg-white/5 rounded-lg px-4 py-2.5 text-sm font-[family-name:var(--font-heading)] text-white/60 hover:text-champagne hover:bg-white/10 transition-all">CanvasRebel</a>
+                </div>
               </div>
             </div>
           </div>
@@ -1033,7 +964,7 @@ export default function HomePage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/85 via-[#1a1510]/60 to-[#1a1510]/40" />
+          <div className="absolute inset-0 bg-black/55" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">

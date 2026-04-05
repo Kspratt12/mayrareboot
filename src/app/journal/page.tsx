@@ -95,7 +95,7 @@ export default function JournalPage() {
       <section className="relative h-[45vh] min-h-[350px] flex items-center">
         <div className="absolute inset-0">
           <Image src="/staff-5.png" alt="Skincare journal" fill className="object-cover" sizes="100vw" priority />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">

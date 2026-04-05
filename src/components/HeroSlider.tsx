@@ -36,14 +36,14 @@ export default function HeroSlider() {
           />
         </div>
       ))}
-      {/* Stronger overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0d0b08]/85 via-[#0d0b08]/50 to-[#0d0b08]/15 z-[1]" />
+      {/* Clean overlay - dark enough to read, light enough to see image */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-[1]" />
 
       {/* Content */}
       <div className="relative z-10 container-premium w-full pt-32 pb-20">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
           {/* Trust badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-5 py-2 mb-6 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 mb-7 animate-fade-in-up" style={{ textShadow: "none" }}>
             <div className="flex items-center gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="w-3.5 h-3.5 text-[#FBBC04]" fill="currentColor" viewBox="0 0 20 20">
@@ -51,20 +51,20 @@ export default function HeroSlider() {
                 </svg>
               ))}
             </div>
-            <span className="text-xs font-medium tracking-wide text-white/90">
+            <span className="text-sm font-semibold tracking-wide text-white">
               5.0 Rated &middot; 500+ Clients
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-heading)] font-medium text-white leading-[1.1] mb-6 animate-fade-in-up animate-delay-100">
             Where Clinical Precision Meets{" "}
-            <span className="italic text-champagne-light">Elevated Skincare</span>
+            <span className="italic text-champagne">Elevated Skincare</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-lg animate-fade-in-up animate-delay-200">
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-lg animate-fade-in-up animate-delay-200">
             Advanced corrective facials, body treatments, and eye enhancements
             delivered by internationally certified estheticians.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300" style={{ textShadow: "none" }}>
             <a
               href="https://mayrasalonga.glossgenius.com/services"
               target="_blank"

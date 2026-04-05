@@ -169,7 +169,7 @@ export default function FacialsPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
@@ -345,7 +345,7 @@ export default function FacialsPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/85 via-[#1a1510]/60 to-[#1a1510]/40" />
+          <div className="absolute inset-0 bg-black/55" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-5xl text-white mb-6">

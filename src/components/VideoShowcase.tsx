@@ -99,17 +99,16 @@ export default function VideoShowcase() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-charcoal">
+    <section className="py-14 md:py-20 bg-charcoal">
       <div className="container-premium">
-        <div className="text-center mb-12">
-          <p className="overline !text-champagne-light mb-4">See It in Action</p>
-          <h2 className="font-[family-name:var(--font-heading)] text-white text-3xl md:text-4xl">
+        <div className="text-center mb-10">
+          <p className="overline !text-champagne-light mb-3">See It in Action</p>
+          <h2 className="font-[family-name:var(--font-heading)] !text-white text-3xl md:text-4xl">
             Inside the Treatment Room
           </h2>
-          <p className="text-white/40 mt-4 max-w-lg mx-auto">
-            Watch real treatments, real results, and the care that goes into every session at Skin Reboot.
+          <p className="text-white/50 mt-3 max-w-md mx-auto text-sm">
+            Real treatments. Real results. Swipe to explore.
           </p>
-          <div className="w-16 h-[2px] bg-champagne mx-auto mt-6" />
         </div>
 
         <div className="relative">
