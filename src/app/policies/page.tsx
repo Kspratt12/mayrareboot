@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Policies",
@@ -57,7 +58,11 @@ export default function PoliciesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[40vh] min-h-[350px] flex items-center bg-charcoal">
+      <section className="relative h-[40vh] min-h-[320px] flex items-center">
+        <div className="absolute inset-0">
+          <Image src="/front-office.png" alt="Skin Reboot Spa Clinic" fill className="object-cover" sizes="100vw" priority />
+          <div className="absolute inset-0 bg-charcoal/65" />
+        </div>
         <div className="container-premium text-center relative z-10">
           <p className="overline !text-champagne-light mb-4">
             Your Visit

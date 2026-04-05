@@ -704,15 +704,12 @@ export default function HomePage() {
           </div>
 
           {/* Award Images Row */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto mb-10">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-              <Image src="/2025-award.png" alt="2025 Quality Business Award" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
+              <Image src="/2025-award.png" alt="2025 Quality Business Award" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-              <Image src="/gala-night-award.png" alt="FILAMCCNC Gala Night Award" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
-            </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2 md:col-span-1">
-              <Image src="/coaching.png" alt="Mayra teaching esthetician coaching" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+              <Image src="/gala-night-award.png" alt="FILAMCCNC Gala Night Award" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
           </div>
 

@@ -99,14 +99,14 @@ export default function VideoShowcase() {
   };
 
   return (
-    <section className="section-padding bg-charcoal">
+    <section className="py-12 md:py-16 bg-charcoal">
       <div className="container-premium">
-        <div className="text-center mb-12">
-          <p className="overline !text-champagne-light mb-4">See It in Action</p>
-          <h2 className="font-[family-name:var(--font-heading)] text-white">
+        <div className="text-center mb-8">
+          <p className="overline !text-champagne-light mb-3">See It in Action</p>
+          <h2 className="font-[family-name:var(--font-heading)] text-white text-2xl md:text-3xl">
             From Our Studio
           </h2>
-          <div className="w-16 h-[2px] bg-champagne mx-auto mt-6" />
+          <p className="text-sm text-white/40 mt-2">Real treatments. Real results. Swipe to explore.</p>
         </div>
 
         <div className="relative">

@@ -92,8 +92,11 @@ export default function JournalPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center">
-        <div className="absolute inset-0 bg-charcoal" />
+      <section className="relative h-[45vh] min-h-[350px] flex items-center">
+        <div className="absolute inset-0">
+          <Image src="/staff-5.png" alt="Skincare journal" fill className="object-cover" sizes="100vw" priority />
+          <div className="absolute inset-0 bg-charcoal/65" />
+        </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
             Skincare Knowledge

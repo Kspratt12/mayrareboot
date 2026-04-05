@@ -36,7 +36,7 @@ export default function HeroSlider() {
           />
         </div>
       ))}
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/40 to-transparent z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1a1510]/75 via-[#1a1510]/35 to-transparent z-[1]" />
 
       {/* Content */}
       <div className="relative z-10 container-premium w-full pt-32 pb-20">

@@ -26,15 +26,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-11 h-11 rounded-full overflow-hidden relative border border-white/20">
-                <Image
-                  src="/logo-transparent.png"
-                  alt="Skin Reboot Spa Clinic"
-                  width={200}
-                  height={200}
-                  className="w-full h-full object-contain brightness-0 invert opacity-90"
-                />
+            <Link href="/" className="flex items-center gap-2.5 mb-6">
+              <div className="w-10 h-10">
+                <svg viewBox="0 0 100 100" fill="none" className="w-full h-full">
+                  <circle cx="50" cy="50" r="46" stroke="#C9A96E" strokeWidth="1.5" />
+                  <circle cx="50" cy="50" r="40" stroke="#C9A96E" strokeWidth="0.8" opacity="0.5" />
+                  <text x="50" y="48" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="18" fontStyle="italic" fill="#C9A96E" fontWeight="400">skin</text>
+                  <text x="50" y="66" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="18" fontStyle="italic" fill="#C9A96E" fontWeight="400">reboot</text>
+                </svg>
               </div>
               <div>
                 <span className="font-[family-name:var(--font-heading)] text-xl font-medium text-white tracking-wide">

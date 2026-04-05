@@ -58,17 +58,15 @@ export default function Navbar() {
       <div className="container-premium">
         <nav className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div className="w-11 h-11 md:w-13 md:h-13 overflow-hidden relative">
-              <Image
-                src="/logo-transparent.png"
-                alt="Skin Reboot Spa Clinic"
-                width={200}
-                height={200}
-                className="w-[140%] h-[140%] object-cover mix-blend-multiply absolute -top-[10%] -left-[20%]"
-                style={{ objectPosition: "center 40%" }}
-                priority
-              />
+          <Link href="/" className="flex items-center gap-2.5 shrink-0">
+            {/* Clean SVG Logo Mark */}
+            <div className="w-10 h-10 md:w-11 md:h-11 relative">
+              <svg viewBox="0 0 100 100" fill="none" className="w-full h-full">
+                <circle cx="50" cy="50" r="46" stroke="#C9A96E" strokeWidth="1.5" />
+                <circle cx="50" cy="50" r="40" stroke="#C9A96E" strokeWidth="0.8" opacity="0.5" />
+                <text x="50" y="48" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="18" fontStyle="italic" fill="#C9A96E" fontWeight="400">skin</text>
+                <text x="50" y="66" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="18" fontStyle="italic" fill="#C9A96E" fontWeight="400">reboot</text>
+              </svg>
             </div>
             <div className="hidden sm:block">
               <span className="font-[family-name:var(--font-heading)] text-xl md:text-2xl font-medium text-charcoal tracking-wide">
