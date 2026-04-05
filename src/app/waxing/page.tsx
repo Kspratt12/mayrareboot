@@ -59,7 +59,7 @@ export default function WaxingPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
@@ -182,11 +182,10 @@ export default function WaxingPage() {
       <section className="section-padding bg-background text-center">
         <div className="container-premium">
           <h2 className="font-[family-name:var(--font-heading)] mb-4">
-            First Time? We Make It Easy.
+            Smooth, Confident Skin Starts Here
           </h2>
-          <p className="text-warm-gray max-w-xl mx-auto mb-8">
-            Our estheticians are experienced in making your waxing appointment
-            as comfortable as possible. If you have questions, just ask.
+          <p className="text-warm-gray max-w-xl mx-auto mb-10">
+            First time or returning client, our estheticians make every waxing appointment comfortable and precise.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

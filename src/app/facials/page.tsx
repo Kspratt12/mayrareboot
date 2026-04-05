@@ -169,7 +169,7 @@ export default function FacialsPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
@@ -179,8 +179,7 @@ export default function FacialsPage() {
             Professional Facials
           </h1>
           <p className="text-lg text-white/70 mt-4 max-w-xl mx-auto">
-            Corrective and holistic facial treatments using products from South
-            Korea, France, Spain, South Africa, and Ukraine
+            Advanced corrective and holistic treatments using internationally sourced products for visible, lasting results
           </p>
         </div>
       </section>
@@ -346,15 +345,14 @@ export default function FacialsPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/85 via-[#1a1510]/60 to-[#1a1510]/40" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-5xl text-white mb-6">
-            Ready for Your Best Skin?
+            Your Best Skin Is One Treatment Away
           </h2>
-          <p className="text-lg text-white/70 mb-8 max-w-xl mx-auto">
-            Our team will help you select the perfect facial based on your skin
-            type, concerns, and goals.
+          <p className="text-lg text-white/70 mb-10 max-w-xl mx-auto">
+            Our estheticians will craft the perfect treatment for your skin type, concerns, and goals.
           </p>
           <a
             href="https://mayrasalonga.glossgenius.com/services"
@@ -362,7 +360,7 @@ export default function FacialsPage() {
             rel="noopener noreferrer"
             className="btn-champagne"
           >
-            Book Your Facial
+            Schedule Your Facial
           </a>
         </div>
       </section>

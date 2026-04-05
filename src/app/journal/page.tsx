@@ -95,7 +95,7 @@ export default function JournalPage() {
       <section className="relative h-[45vh] min-h-[350px] flex items-center">
         <div className="absolute inset-0">
           <Image src="/staff-5.png" alt="Skincare journal" fill className="object-cover" sizes="100vw" priority />
-          <div className="absolute inset-0 bg-charcoal/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
@@ -105,8 +105,7 @@ export default function JournalPage() {
             The Skin Reboot Journal
           </h1>
           <p className="text-lg text-white/70 mt-4 max-w-xl mx-auto">
-            Expert skincare advice, treatment guides, and tips from our certified
-            estheticians in Cary, NC
+            Expert skincare advice and treatment guides from our certified estheticians, trusted across the Triangle
           </p>
         </div>
       </section>
@@ -158,11 +157,10 @@ export default function JournalPage() {
       <section className="section-padding bg-cream text-center">
         <div className="container-premium">
           <h2 className="font-[family-name:var(--font-heading)] mb-4">
-            Ready to Put This Knowledge to Work?
+            Ready to Start Your Skin Plan?
           </h2>
-          <p className="text-warm-gray max-w-xl mx-auto mb-8">
-            Book a treatment and let our estheticians create a personalized
-            skincare plan based on your unique needs and goals.
+          <p className="text-warm-gray max-w-xl mx-auto mb-10">
+            Our estheticians will create a personalized treatment plan based on your unique skin type, concerns, and goals.
           </p>
           <a
             href="https://mayrasalonga.glossgenius.com/services"

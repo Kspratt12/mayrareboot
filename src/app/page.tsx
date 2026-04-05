@@ -8,28 +8,28 @@ const serviceCategories = [
   {
     title: "Facials",
     description:
-      "From corrective treatments to holistic rituals, our facials are designed to transform your skin with precision and care.",
+      "Corrective treatments and holistic rituals designed to transform your skin with precision and care.",
     image: "/Skin-Reboot-Signature-Facial.png",
     href: "/facials",
   },
   {
     title: "Body Treatments",
     description:
-      "Targeted treatments for the back, chest, underarms, and more. Designed to cleanse, refine, and rejuvenate.",
+      "Targeted treatments for the back, chest, underarms, and more. Cleanse, refine, and rejuvenate.",
     image: "/Backcial.png",
     href: "/body-treatments",
   },
   {
     title: "Eye Enhancements",
     description:
-      "Lash lifts, brow lamination, professional tinting, and our signature Eye Perfecting Facial for a brighter, more defined look.",
+      "Lash lifts, brow lamination, professional tinting, and our signature Eye Perfecting Facial.",
     image: "/Lash-Lift-Perm.png",
     href: "/eye-enhancements",
   },
   {
     title: "Waxing",
     description:
-      "Quick, precise, and comfortable waxing services using professional techniques for smooth, lasting results.",
+      "Quick, precise, and comfortable waxing using professional techniques for smooth, lasting results.",
     image: "/Eyebrow-Tinting.png",
     href: "/waxing",
   },
@@ -151,12 +151,12 @@ export default function HomePage() {
   return (
     <>
       {/* ============================================ */}
-      {/* SECTION 1: PREMIUM HERO SLIDER */}
+      {/* 1. HERO */}
       {/* ============================================ */}
       <HeroSlider />
 
       {/* ============================================ */}
-      {/* SECTION 2: TRUST STRIP */}
+      {/* 2. TRUST STRIP */}
       {/* ============================================ */}
       <section className="bg-charcoal py-5">
         <div className="container-premium">
@@ -182,28 +182,102 @@ export default function HomePage() {
             </span>
             <span className="text-white/20 hidden lg:inline">|</span>
             <span className="text-[11px] font-medium tracking-[0.15em] uppercase text-white/50 hidden lg:inline">
-              By Appointment
+              Trusted Across the Triangle
             </span>
           </div>
         </div>
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 3: SERVICE CATEGORIES */}
+      {/* 3. IMMEDIATE SOCIAL PROOF (Google + 3 Reviews) */}
       {/* ============================================ */}
       <section className="section-padding bg-background">
         <div className="container-premium">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-4 bg-white rounded-2xl px-8 py-5 shadow-sm border border-stone/20">
+              <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none">
+                <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
+                <path d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
+                <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
+                <path d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.001-.001 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
+              </svg>
+              <div className="text-left">
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 star-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span className="text-2xl font-[family-name:var(--font-heading)] font-bold text-charcoal">
+                    5.0
+                  </span>
+                </div>
+                <p className="text-sm text-warm-gray mt-0.5">
+                  Based on <span className="font-medium text-charcoal">353 reviews</span> on Google
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {reviews.slice(0, 3).map((review) => (
+              <div
+                key={review.name}
+                className="bg-white rounded-xl p-8 border border-stone/10"
+              >
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 star-gold" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm text-warm-gray leading-relaxed mb-6 italic">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-sage/15 flex items-center justify-center">
+                    <span className="text-sm font-medium text-sage-dark">
+                      {review.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-charcoal">{review.name}</p>
+                    <p className="text-xs text-warm-gray-light flex items-center gap-1">
+                      <svg className="w-3 h-3" viewBox="0 0 48 48" fill="none">
+                        <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
+                        <path d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
+                        <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
+                        <path d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.001-.001 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
+                      </svg>
+                      Google Review
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* 4. SERVICE CATEGORIES */}
+      {/* ============================================ */}
+      <section className="section-padding bg-cream">
+        <div className="container-premium">
           <ScrollReveal>
-          <div className="text-center mb-10">
-            <p className="overline mb-4">What We Offer</p>
+          <div className="text-center mb-14">
+            <p className="overline mb-4">Advanced Treatments</p>
             <h2 className="font-[family-name:var(--font-heading)]">
-              Our Signature Services
+              Treatments Designed for Real Results
             </h2>
             <div className="divider-sage mx-auto mt-6" />
           </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {serviceCategories.map((service) => (
               <Link
                 key={service.title}
@@ -236,21 +310,160 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+
+          {/* Mid-section CTA */}
+          <div className="text-center mt-14">
+            <a
+              href="https://mayrasalonga.glossgenius.com/services"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-champagne"
+            >
+              Book Your Treatment
+            </a>
+          </div>
         </div>
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 4: WHY CHOOSE SKIN REBOOT */}
+      {/* 5. BEFORE & AFTER (moved up - proof of results) */}
+      {/* ============================================ */}
+      <section className="section-padding bg-background">
+        <div className="container-premium">
+          <div className="text-center mb-14">
+            <p className="overline mb-4">Proven Results</p>
+            <h2 className="font-[family-name:var(--font-heading)]">
+              See the Difference Professional Care Makes
+            </h2>
+            <p className="text-warm-gray mt-4 max-w-xl mx-auto">
+              Real transformations from clients across Cary, Raleigh, Apex, and Morrisville.
+            </p>
+            <div className="divider-sage mx-auto mt-6" />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+              <div
+                key={num}
+                className="relative aspect-square rounded-xl overflow-hidden group"
+              >
+                <Image
+                  src={`/before-after-${num}.png`}
+                  alt={`Skincare treatment result ${num}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="https://mayrasalonga.glossgenius.com/services"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Start Your Transformation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* 6. ABOUT MAYRA / FOUNDER CREDIBILITY */}
       {/* ============================================ */}
       <section className="section-padding bg-cream">
         <div className="container-premium">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="overline mb-4">Why Skin Reboot</p>
-              <h2 className="font-[family-name:var(--font-heading)] mb-8">
-                A Different Standard of Care
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="relative order-2 lg:order-1">
+              <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
+                <Image
+                  src="/mayra-2.png"
+                  alt="Mayra Salonga Davis, founder of Skin Reboot Spa Clinic"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-6 shadow-lg hidden md:block">
+                <Image
+                  src="/2025-award.png"
+                  alt="Award"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <p className="overline mb-4">Meet the Founder</p>
+              <h2 className="font-[family-name:var(--font-heading)] mb-2">
+                Mayra Salonga Davis
               </h2>
-              <div className="space-y-8">
+              <p className="text-sm tracking-[0.1em] uppercase text-sage-dark font-medium mb-8">
+                Certified Esthetician &middot; Beauty Therapist &middot; Educator
+              </p>
+              <div className="space-y-5 text-warm-gray leading-relaxed">
+                <p>
+                  With a profound understanding of beauty from multiple traditions,
+                  Mayra blends traditional Asian and Western treatments with a
+                  holistic and corrective approach that sets Skin Reboot apart.
+                </p>
+                <p>
+                  Her journey began in Hong Kong, where she earned her beauty
+                  specialist diploma with honors and received the Most Outstanding
+                  Student of the Year award. After relocating to the United States
+                  in 2018, she built Skin Reboot from the ground up, earning a
+                  reputation for exceptional care and visible results.
+                </p>
+                <p>
+                  Today, she leads a team of certified estheticians who share her
+                  commitment to personalized, results-driven skincare using
+                  professional products sourced from six countries.
+                </p>
+              </div>
+
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                {[
+                  "CIBTAC Certified",
+                  "ITEC Qualified",
+                  "NC Licensed Esthetician",
+                  "Aesthetic Educator",
+                ].map((cred) => (
+                  <div key={cred} className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-sage-dark shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-sm text-charcoal font-medium">{cred}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href="/about"
+                className="btn-secondary mt-10 inline-flex"
+              >
+                Read Our Story
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* 7. WHY CHOOSE SKIN REBOOT */}
+      {/* ============================================ */}
+      <section className="section-padding bg-background">
+        <div className="container-premium">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <p className="overline mb-4">Why Clients Choose Us</p>
+              <h2 className="font-[family-name:var(--font-heading)] mb-10">
+                A Higher Standard of Skincare
+              </h2>
+              <div className="space-y-10">
                 {[
                   {
                     title: "Internationally Sourced Products",
@@ -269,7 +482,7 @@ export default function HomePage() {
                     desc: "No two skin types are the same. Every session is customized to your unique needs, concerns, and goals.",
                   },
                 ].map((item) => (
-                  <div key={item.title} className="flex gap-4">
+                  <div key={item.title} className="flex gap-5">
                     <div className="shrink-0 w-10 h-10 rounded-full bg-sage/15 flex items-center justify-center mt-0.5">
                       <svg className="w-5 h-5 text-sage-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -318,72 +531,16 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 5: ABOUT MAYRA / CLINIC STORY */}
-      {/* ============================================ */}
-      <section className="section-padding bg-background">
-        <div className="container-premium">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative order-2 lg:order-1">
-              <div className="relative h-[450px] md:h-[550px] rounded-2xl overflow-hidden">
-                <Image
-                  src="/mayra-2.png"
-                  alt="Mayra Salonga Davis, founder of Skin Reboot Spa Clinic"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-              <div className="absolute -top-4 -right-4 bg-champagne/10 rounded-2xl w-full h-full -z-10 hidden md:block" />
-            </div>
-            <div className="order-1 lg:order-2">
-              <p className="overline mb-4">Meet the Founder</p>
-              <h2 className="font-[family-name:var(--font-heading)] mb-6">
-                Mayra Salonga Davis
-              </h2>
-              <p className="text-sm tracking-[0.1em] uppercase text-sage-dark font-medium mb-6">
-                Certified Esthetician &middot; Beauty Therapist &middot; Educator
-              </p>
-              <div className="space-y-4 text-warm-gray leading-relaxed">
-                <p>
-                  With a profound understanding of beauty from multiple traditions,
-                  Mayra blends traditional Asian and Western treatments with a
-                  holistic and corrective approach that sets Skin Reboot apart.
-                </p>
-                <p>
-                  Her journey began in Hong Kong, where she earned her beauty
-                  specialist diploma with honors and received the Most Outstanding
-                  Student of the Year award. After relocating to the United States
-                  in 2018, she built Skin Reboot from the ground up, earning a
-                  reputation for exceptional care and visible results.
-                </p>
-                <p>
-                  Today, she leads a team of certified estheticians who share her
-                  commitment to personalized, results-driven skincare using
-                  professional products sourced from six countries.
-                </p>
-              </div>
-              <Link
-                href="/about"
-                className="btn-secondary mt-8 inline-flex"
-              >
-                Read Our Story
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
       {/* VIDEO SHOWCASE */}
       {/* ============================================ */}
       <VideoShowcase />
 
       {/* ============================================ */}
-      {/* SECTION 6: FEATURED TREATMENTS */}
+      {/* 8. FEATURED TREATMENTS */}
       {/* ============================================ */}
       <section className="section-padding bg-cream">
         <div className="container-premium">
-          <div className="text-center mb-10">
+          <div className="text-center mb-14">
             <p className="overline mb-4">Signature Experiences</p>
             <h2 className="font-[family-name:var(--font-heading)]">
               Featured Treatments
@@ -391,7 +548,7 @@ export default function HomePage() {
             <div className="divider-sage mx-auto mt-6" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {featuredTreatments.map((treatment) => (
               <Link
                 key={treatment.name}
@@ -435,7 +592,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-14">
             <Link href="/facials" className="btn-secondary">
               View All Treatments
             </Link>
@@ -444,35 +601,34 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 7: PRODUCT HIGHLIGHTS */}
+      {/* 9. PRODUCTS */}
       {/* ============================================ */}
       <section className="section-padding bg-background">
         <div className="container-premium">
-          <div className="text-center mb-10">
+          <div className="text-center mb-14">
             <p className="overline mb-4">Curated Skincare</p>
             <h2 className="font-[family-name:var(--font-heading)]">
               Professional Products
             </h2>
             <p className="text-warm-gray mt-4 max-w-2xl mx-auto">
               Sourced from leading skincare labs in South Korea, France, Spain, South Africa, and beyond.
-              Every product in our collection has been selected for proven clinical results.
             </p>
             <div className="divider-sage mx-auto mt-6" />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {featuredProducts.map((product) => (
               <Link
                 key={product.name}
                 href="/products"
-                className="group card-hover bg-white rounded-xl p-6 text-center"
+                className="group text-center"
               >
-                <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden bg-cream">
+                <div className="relative w-full aspect-square mb-5 rounded-xl overflow-hidden bg-white">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, 25vw"
                   />
                 </div>
@@ -487,7 +643,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-14">
             <Link href="/products" className="btn-secondary">
               Shop All Products
             </Link>
@@ -496,11 +652,11 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 8: TEAM SECTION */}
+      {/* 10. TEAM */}
       {/* ============================================ */}
       <section className="section-padding bg-cream">
         <div className="container-premium">
-          <div className="text-center mb-10">
+          <div className="text-center mb-14">
             <p className="overline mb-4">Our Team</p>
             <h2 className="font-[family-name:var(--font-heading)]">
               Meet Your Estheticians
@@ -508,48 +664,46 @@ export default function HomePage() {
             <div className="divider-sage mx-auto mt-6" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
             {[
               {
                 name: "Mayra",
-                title: "Certified Esthetician / Beauty Therapist / Educator",
+                title: "Founder / Lead Esthetician / Educator",
+                specialty: "Corrective & holistic facials, international techniques",
                 image: "/mayra-main.png",
-                bio: "Founder and lead esthetician with international training from Hong Kong. Specializes in blending Asian and Western techniques for corrective and holistic skincare.",
               },
               {
                 name: "Ezra",
                 title: "Certified Esthetician / Beauty Therapist",
+                specialty: "Advanced facial manipulation, gentle extractions",
                 image: "/ezra.png",
-                bio: "Expert in advanced facial manipulation techniques with a corrective and holistic approach. Known for thorough, gentle extractions and personalized care.",
               },
               {
                 name: "Zoe",
                 title: "Certified Esthetician / Beauty Therapist",
+                specialty: "Skin wellness, personalized treatment plans",
                 image: "/zoe.png",
-                bio: "Specializes in facial treatments and skin wellness with a focus on the connection between skin vitality and overall health.",
               },
             ].map((member) => (
-              <div key={member.name} className="bg-white rounded-xl overflow-hidden card-hover text-center">
-                <div className="relative h-80 overflow-hidden">
+              <div key={member.name} className="group text-center">
+                <div className="relative h-96 rounded-2xl overflow-hidden mb-6">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-[family-name:var(--font-heading)] text-2xl mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-[11px] font-medium tracking-[0.08em] uppercase text-sage-dark mb-3">
-                    {member.title}
-                  </p>
-                  <p className="text-sm text-warm-gray leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
+                <h3 className="font-[family-name:var(--font-heading)] text-2xl mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-[11px] font-medium tracking-[0.08em] uppercase text-sage-dark mb-2">
+                  {member.title}
+                </p>
+                <p className="text-sm text-warm-gray italic">
+                  {member.specialty}
+                </p>
               </div>
             ))}
           </div>
@@ -557,48 +711,19 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 9: REVIEWS / SOCIAL PROOF */}
+      {/* 11. MORE REVIEWS */}
       {/* ============================================ */}
       <section className="section-padding bg-background">
         <div className="container-premium">
-          {/* Google Rating Header */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-14">
             <p className="overline mb-4">Client Experiences</p>
             <h2 className="font-[family-name:var(--font-heading)]">
-              What Our Clients Say
+              More Client Stories
             </h2>
-
-            {/* Prominent Google Rating Badge */}
-            <div className="inline-flex items-center gap-4 bg-white rounded-2xl px-8 py-5 mt-8 shadow-sm border border-stone/20">
-              {/* Colorful Google G Logo */}
-              <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none">
-                <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
-                <path d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
-                <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
-                <path d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.001-.001 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
-              </svg>
-              <div className="text-left">
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 star-gold" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-2xl font-[family-name:var(--font-heading)] font-bold text-charcoal">
-                    5.0
-                  </span>
-                </div>
-                <p className="text-sm text-warm-gray mt-0.5">
-                  Based on <span className="font-medium text-charcoal">353 reviews</span> on Google
-                </p>
-              </div>
-            </div>
           </div>
 
-          {/* Review Photos Row */}
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mb-12">
+          {/* Review Photos */}
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mb-14">
             {[
               "/karla-roland-review.png",
               "/karla-roland-review2.png",
@@ -619,12 +744,11 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Reviews Grid - First 6 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {reviews.slice(0, 6).map((review) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {reviews.slice(3, 9).map((review) => (
               <div
                 key={review.name}
-                className="bg-white rounded-xl p-8 card-hover"
+                className="bg-white rounded-xl p-8"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(review.rating)].map((_, i) => (
@@ -658,53 +782,22 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
-          {/* Reviews Grid - Next 9 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {reviews.slice(6).map((review) => (
-              <div
-                key={review.name}
-                className="bg-white rounded-xl p-6 card-hover"
-              >
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <svg key={i} className="w-3.5 h-3.5 star-gold" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-sm text-warm-gray leading-relaxed mb-4 italic">
-                  &ldquo;{review.text}&rdquo;
-                </p>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-sage/15 flex items-center justify-center">
-                    <span className="text-xs font-medium text-sage-dark">
-                      {review.name.charAt(0)}
-                    </span>
-                  </div>
-                  <p className="text-xs font-medium text-charcoal">{review.name}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 10: AWARDS & RECOGNITION */}
+      {/* 12. AWARDS */}
       {/* ============================================ */}
-      <section className="py-12 md:py-16 bg-charcoal text-white">
+      <section className="py-16 md:py-20 bg-charcoal text-white">
         <div className="container-premium">
-          {/* Header */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-12">
             <p className="overline !text-champagne-light mb-3">Recognition</p>
             <h2 className="font-[family-name:var(--font-heading)] text-white text-3xl md:text-4xl">
               Awards & Press
             </h2>
           </div>
 
-          {/* Award Images Row */}
-          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto mb-10">
+          <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image src="/2025-award.png" alt="2025 Quality Business Award" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
@@ -713,11 +806,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Awards + Press Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Awards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="space-y-4">
-              <div className="flex items-center gap-4 bg-white/5 rounded-lg p-4">
+              <div className="flex items-center gap-4 bg-white/5 rounded-lg p-5">
                 <div className="shrink-0 w-10 h-10 rounded-full bg-champagne/20 flex items-center justify-center">
                   <svg className="w-5 h-5 text-champagne" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
@@ -728,7 +819,7 @@ export default function HomePage() {
                   <p className="text-xs text-white/50">CMM Monita Beauty Academy HK &middot; 2009</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 bg-white/5 rounded-lg p-4">
+              <div className="flex items-center gap-4 bg-white/5 rounded-lg p-5">
                 <div className="shrink-0 w-10 h-10 rounded-full bg-champagne/20 flex items-center justify-center">
                   <svg className="w-5 h-5 text-champagne" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
@@ -741,7 +832,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* As Seen In */}
             <div className="flex flex-col justify-center">
               <p className="text-xs font-medium tracking-[0.15em] uppercase text-white/30 mb-4">As Seen In</p>
               <div className="flex flex-wrap gap-4">
@@ -755,60 +845,23 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 11: BEFORE & AFTER */}
-      {/* ============================================ */}
-      <section className="section-padding bg-background">
-        <div className="container-premium">
-          <div className="text-center mb-10">
-            <p className="overline mb-4">Real Results</p>
-            <h2 className="font-[family-name:var(--font-heading)]">
-              Transformations
-            </h2>
-            <p className="text-warm-gray mt-4 max-w-xl mx-auto">
-              See the real results our clients experience with professional skincare
-              treatments at Skin Reboot Spa Clinic.
-            </p>
-            <div className="divider-sage mx-auto mt-6" />
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
-              <div
-                key={num}
-                className="relative aspect-square rounded-xl overflow-hidden card-hover"
-              >
-                <Image
-                  src={`/before-after-${num}.png`}
-                  alt={`Skincare treatment result ${num}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* SECTION 12: PROMOTIONS / PACKAGES */}
+      {/* 13. PROMOTIONS */}
       {/* ============================================ */}
       <section className="section-padding bg-cream">
         <div className="container-premium">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <p className="overline mb-4">Special Offers</p>
               <h2 className="font-[family-name:var(--font-heading)] mb-6">
                 Value Packages & Gift Cards
               </h2>
-              <p className="text-warm-gray leading-relaxed mb-8">
+              <p className="text-warm-gray leading-relaxed mb-10">
                 Invest in your skincare journey with our value packages. The more
-                you commit, the more you save. Packages are valid for one year,
-                applicable to any treatment, and can be shared with family and
-                friends.
+                you commit, the more you save. Valid for one year, applicable to
+                any treatment, and shareable with family and friends.
               </p>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-10">
                 {[
                   { amount: "$1,000", discount: "10% Off" },
                   { amount: "$2,000", discount: "15% Off" },
@@ -816,7 +869,7 @@ export default function HomePage() {
                 ].map((pkg) => (
                   <div
                     key={pkg.amount}
-                    className="flex items-center justify-between bg-white rounded-lg p-5 border border-stone/30"
+                    className="flex items-center justify-between bg-white rounded-lg p-5 border border-stone/20"
                   >
                     <span className="font-[family-name:var(--font-heading)] text-xl text-charcoal">
                       {pkg.amount}
@@ -856,18 +909,17 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 13: CONTACT / LOCATION / HOURS + FINAL CTA */}
+      {/* 14. CONTACT / LOCATION */}
       {/* ============================================ */}
       <section className="section-padding bg-background">
         <div className="container-premium">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Info */}
             <div>
               <p className="overline mb-4">Visit Us</p>
-              <h2 className="font-[family-name:var(--font-heading)] mb-8">
+              <h2 className="font-[family-name:var(--font-heading)] mb-10">
                 Skin Reboot Spa Clinic
               </h2>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div className="flex gap-4">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-sage/15 flex items-center justify-center">
                     <svg className="w-5 h-5 text-sage-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -921,7 +973,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Map */}
             <div className="rounded-2xl overflow-hidden h-[400px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.175!2d-78.7914!3d35.7811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5a44dbaaeb65%3A0x3a5893a46b3cde79!2s130%20Iowa%20Ln%20%23103%2C%20Cary%2C%20NC%2027511!5e0!3m2!1sen!2sus!4v1"
@@ -941,7 +992,7 @@ export default function HomePage() {
       {/* ============================================ */}
       {/* FINAL CTA */}
       {/* ============================================ */}
-      <section className="relative py-24 md:py-32">
+      <section className="relative py-28 md:py-36">
         <div className="absolute inset-0">
           <Image
             src="/hero-3.png"
@@ -950,18 +1001,17 @@ export default function HomePage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/85 via-[#1a1510]/60 to-[#1a1510]/40" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
-            Your Skin Deserves Expert Care
+            Your Skin Journey Starts Here
           </p>
-          <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-5xl text-white mb-6 max-w-2xl mx-auto">
-            Ready to Experience the Difference?
+          <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-5xl lg:text-6xl text-white mb-6 max-w-3xl mx-auto leading-tight">
+            The Confidence You Deserve Is One Treatment Away
           </h2>
-          <p className="text-lg text-white/70 mb-10 max-w-xl mx-auto">
-            Book your appointment today and discover why over 350 clients trust
-            Skin Reboot for their skincare journey.
+          <p className="text-lg text-white/70 mb-12 max-w-xl mx-auto">
+            Join 500+ clients across the Triangle who trust Skin Reboot for visible, lasting results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

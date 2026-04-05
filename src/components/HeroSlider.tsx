@@ -42,14 +42,14 @@ export default function HeroSlider() {
       <div className="relative z-10 container-premium w-full pt-32 pb-20">
         <div className="max-w-2xl">
           <p className="overline !text-champagne-light mb-5 animate-fade-in-up">
-            Premium Skincare in Cary, NC
+            5.0 Rated &middot; Trusted by 500+ Clients
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-heading)] font-medium text-white leading-[1.1] mb-5 animate-fade-in-up animate-delay-100">
-            Where Science Meets{" "}
-            <span className="italic text-champagne-light">Skin Wellness</span>
+            Where Clinical Precision Meets{" "}
+            <span className="italic text-champagne-light">Elevated Skincare</span>
           </h1>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-lg animate-fade-in-up animate-delay-200">
-            Corrective facials, body treatments, waxing, and eye enhancements
+            Advanced corrective facials, body treatments, and eye enhancements
             delivered by internationally certified estheticians. Real expertise.
             Visible results.
           </p>

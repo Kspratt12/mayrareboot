@@ -91,18 +91,17 @@ export default function ServicesPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
-            Professional Skincare
+            Advanced Skincare
           </p>
           <h1 className="font-[family-name:var(--font-heading)] text-4xl md:text-6xl text-white">
             Our Services
           </h1>
           <p className="text-lg text-white/70 mt-4 max-w-xl mx-auto">
-            Corrective and holistic treatments using internationally sourced
-            products and advanced techniques
+            Advanced treatments using internationally sourced products, trusted by clients across the Triangle
           </p>
         </div>
       </section>
@@ -110,7 +109,7 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className="section-padding bg-background">
         <div className="container-premium">
-          <div className="space-y-20">
+          <div className="space-y-24">
             {services.map((service, index) => (
               <div
                 key={service.title}
@@ -201,15 +200,14 @@ export default function ServicesPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/85 via-[#1a1510]/60 to-[#1a1510]/40" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-5xl text-white mb-6">
-            Not Sure Which Treatment Is Right for You?
+            Your Perfect Treatment Is Waiting
           </h2>
-          <p className="text-lg text-white/70 mb-8 max-w-xl mx-auto">
-            Our estheticians will help you find the perfect treatment based on
-            your skin type, concerns, and goals.
+          <p className="text-lg text-white/70 mb-10 max-w-xl mx-auto">
+            Our estheticians will craft a personalized plan based on your skin type, concerns, and goals.
           </p>
           <a
             href="https://mayrasalonga.glossgenius.com/services"

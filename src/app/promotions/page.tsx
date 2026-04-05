@@ -22,7 +22,7 @@ export default function PromotionsPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
@@ -66,8 +66,8 @@ export default function PromotionsPage() {
                   }`}
                 >
                   {pkg.featured && (
-                    <span className="text-[11px] font-medium tracking-wider uppercase text-champagne mb-4 block">
-                      Most Popular
+                    <span className="text-[10px] font-medium tracking-wider uppercase text-champagne mb-4 block">
+                      Recommended
                     </span>
                   )}
                   <p className={`text-4xl font-[family-name:var(--font-heading)] font-semibold mb-2 ${

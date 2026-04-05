@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center">
+      <section className="relative h-[55vh] min-h-[420px] flex items-center">
         <div className="absolute inset-0">
           <Image
             src="/front-office-full-2.png"
@@ -22,7 +22,7 @@ export default function AboutPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">Our Story</p>
@@ -32,16 +32,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Our Story - Split Layout */}
       <section className="section-padding bg-background">
         <div className="container-premium">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <p className="overline mb-4">Our Mission</p>
-              <h2 className="font-[family-name:var(--font-heading)] mb-6">
+              <h2 className="font-[family-name:var(--font-heading)] mb-8">
                 Exceptional Skincare, Rooted in Expertise
               </h2>
-              <div className="space-y-4 text-warm-gray leading-relaxed">
+              <div className="space-y-5 text-warm-gray leading-relaxed">
                 <p>
                   Skin Reboot Spa Clinic has earned its reputation by going out of
                   its way to provide truly exceptional service to each client. What
@@ -58,9 +58,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   This global approach to skincare, combined with a deeply personal
-                  touch, is what makes every visit to Skin Reboot feel different. We
-                  understand that your needs can change, and we are always ready to
-                  adapt our services to ensure the best possible results.
+                  touch, is what makes every visit to Skin Reboot feel different.
                 </p>
               </div>
             </div>
@@ -80,7 +78,7 @@ export default function AboutPage() {
       {/* Mayra Spotlight */}
       <section className="section-padding bg-cream">
         <div className="container-premium">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative order-2 lg:order-1">
               <div className="relative h-[550px] rounded-2xl overflow-hidden">
                 <Image
@@ -106,32 +104,27 @@ export default function AboutPage() {
               <h2 className="font-[family-name:var(--font-heading)] mb-2">
                 Mayra Salonga Davis
               </h2>
-              <p className="text-sm tracking-[0.1em] uppercase text-sage-dark font-medium mb-6">
+              <p className="text-sm tracking-[0.1em] uppercase text-sage-dark font-medium mb-8">
                 Certified Esthetician &middot; Beauty Therapist &middot; Educator
               </p>
-              <div className="space-y-4 text-warm-gray leading-relaxed">
+              <div className="space-y-5 text-warm-gray leading-relaxed max-w-lg">
                 <p>
                   With a profound understanding of beauty from multiple traditions,
                   Mayra specializes in blending traditional Asian and Western
-                  treatments with a holistic and corrective approach. Her expertise
-                  spans facials, waxing, eye enhancements, meditation therapy
-                  treatments, body rejuvenation, massages, nail services, and
-                  permanent makeup.
+                  treatments with a holistic and corrective approach.
                 </p>
                 <p>
                   Originally from the Philippines, Mayra relocated to Hong Kong at
                   age six and earned her beauty specialist diploma in 2009 with
                   honors, receiving the Most Outstanding Student of the Year award
-                  at CMM Monita Beauty Academy. After moving to the United States
-                  in 2018, she completed her NC esthetics program, passed her board
-                  exam, and launched Skin Reboot in August 2019.
+                  at CMM Monita Beauty Academy.
                 </p>
                 <p>
-                  Her journey was not easy. She started with zero clients, relied on
-                  rideshare to get to her clinic, and worked evenings to support her
-                  business through its early days and through COVID-19. Through faith,
-                  resilience, and word-of-mouth referrals, she built a fully booked
-                  practice and a reputation for exceptional results.
+                  After moving to the United States in 2018, she completed her NC
+                  esthetics program, passed her board exam, and launched Skin Reboot
+                  in August 2019. She started with zero clients and built a fully
+                  booked practice through faith, resilience, and word-of-mouth
+                  referrals.
                 </p>
                 <p>
                   Today, Mayra holds her aesthetic educator license and leads a team
@@ -141,7 +134,7 @@ export default function AboutPage() {
               </div>
 
               {/* Credentials */}
-              <div className="mt-8 grid grid-cols-2 gap-4">
+              <div className="mt-10 grid grid-cols-2 gap-4">
                 {[
                   "CIBTAC Certified",
                   "ITEC Qualified",
@@ -172,48 +165,46 @@ export default function AboutPage() {
             <div className="divider-sage mx-auto mt-6" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
             {[
               {
                 name: "Mayra",
-                title: "Certified Esthetician / Beauty Therapist / Educator",
+                title: "Founder / Lead Esthetician / Educator",
                 image: "/mayra.png",
-                bio: "Founder and lead esthetician with over 15 years of experience. Trained in Hong Kong with international certifications. Blends Asian and Western techniques for corrective and holistic skincare that delivers real results.",
+                specialty: "Corrective & holistic facials, international techniques",
               },
               {
                 name: "Ezra",
                 title: "Certified Esthetician / Beauty Therapist",
                 image: "/ezra.png",
-                bio: "Expert in advanced facial manipulation techniques with a corrective and holistic approach. Known for thorough, gentle extractions and personalized attention to detail that clients love.",
+                specialty: "Advanced facial manipulation, gentle extractions",
               },
               {
                 name: "Zoe",
                 title: "Certified Esthetician / Beauty Therapist",
                 image: "/zoe.png",
-                bio: "Specializes in facial treatments and skin wellness. Focuses on the connection between skin vitality and overall health, empowering clients with education and personalized care plans.",
+                specialty: "Skin wellness, personalized treatment plans",
               },
             ].map((member) => (
-              <div key={member.name} className="bg-white rounded-xl overflow-hidden card-hover text-center">
-                <div className="relative h-96 overflow-hidden">
+              <div key={member.name} className="group text-center">
+                <div className="relative h-[420px] rounded-2xl overflow-hidden mb-6">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-[family-name:var(--font-heading)] text-2xl mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-[11px] font-medium tracking-[0.08em] uppercase text-sage-dark mb-4">
-                    {member.title}
-                  </p>
-                  <p className="text-sm text-warm-gray leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
+                <h3 className="font-[family-name:var(--font-heading)] text-2xl mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-[11px] font-medium tracking-[0.08em] uppercase text-sage-dark mb-2">
+                  {member.title}
+                </p>
+                <p className="text-sm text-warm-gray italic">
+                  {member.specialty}
+                </p>
               </div>
             ))}
           </div>
@@ -276,20 +267,29 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-cream text-center">
-        <div className="container-premium">
-          <h2 className="font-[family-name:var(--font-heading)] mb-4">
+      <section className="relative py-28 md:py-36">
+        <div className="absolute inset-0">
+          <Image
+            src="/hero-2.png"
+            alt="Book your treatment"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/85 via-[#1a1510]/60 to-[#1a1510]/40" />
+        </div>
+        <div className="relative z-10 container-premium text-center">
+          <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-5xl text-white mb-6">
             Experience the Skin Reboot Difference
           </h2>
-          <p className="text-warm-gray max-w-xl mx-auto mb-8">
-            Book your first treatment and discover why clients across Cary,
-            Raleigh, Apex, and Morrisville trust Skin Reboot for their skincare.
+          <p className="text-lg text-white/70 max-w-xl mx-auto mb-10">
+            Trusted by clients across Cary, Raleigh, Apex, and Morrisville. Book your treatment and see the difference.
           </p>
           <a
             href="https://mayrasalonga.glossgenius.com/services"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className="btn-champagne"
           >
             Book an Appointment
           </a>

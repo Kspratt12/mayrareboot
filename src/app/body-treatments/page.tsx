@@ -75,7 +75,7 @@ export default function BodyTreatmentsPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
@@ -94,7 +94,7 @@ export default function BodyTreatmentsPage() {
       {/* Treatments */}
       <section className="section-padding bg-background">
         <div className="container-premium">
-          <div className="space-y-12">
+          <div className="space-y-14">
             {treatments.map((treatment) => (
               <div
                 key={treatment.name}
@@ -172,11 +172,10 @@ export default function BodyTreatmentsPage() {
       <section className="section-padding bg-cream text-center">
         <div className="container-premium">
           <h2 className="font-[family-name:var(--font-heading)] mb-4">
-            Questions About Body Treatments?
+            Treat Your Body to the Care It Deserves
           </h2>
-          <p className="text-warm-gray max-w-xl mx-auto mb-8">
-            Our team is happy to help you choose the right treatment. Every body
-            treatment can be customized to your specific needs.
+          <p className="text-warm-gray max-w-xl mx-auto mb-10">
+            Every body treatment is customized to your specific needs. Our estheticians will guide you to the right choice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

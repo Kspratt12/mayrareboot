@@ -74,7 +74,7 @@ export default function EyeEnhancementsPage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-charcoal/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
@@ -181,9 +181,8 @@ export default function EyeEnhancementsPage() {
           <h2 className="font-[family-name:var(--font-heading)] mb-4">
             Enhance Your Natural Beauty
           </h2>
-          <p className="text-warm-gray max-w-xl mx-auto mb-8">
-            Our eye enhancement services are designed to bring out the best in
-            your natural features with polished, lasting results.
+          <p className="text-warm-gray max-w-xl mx-auto mb-10">
+            Polished, natural-looking results that bring out the best in your features. No maintenance, just confidence.
           </p>
           <a
             href="https://mayrasalonga.glossgenius.com/services"

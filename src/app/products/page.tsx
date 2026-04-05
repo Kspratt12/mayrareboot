@@ -36,7 +36,7 @@ export default function ProductsPage() {
       <section className="relative h-[45vh] min-h-[350px] flex items-center">
         <div className="absolute inset-0">
           <Image src="/staff-4.png" alt="Premium skincare products" fill className="object-cover" sizes="100vw" priority />
-          <div className="absolute inset-0 bg-charcoal/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1510]/80 via-[#1a1510]/50 to-[#1a1510]/30" />
         </div>
         <div className="relative z-10 container-premium text-center">
           <p className="overline !text-champagne-light mb-4">
@@ -46,9 +46,8 @@ export default function ProductsPage() {
             Professional Skincare Products
           </h1>
           <p className="text-lg text-white/70 mt-4 max-w-2xl mx-auto">
-            Formulated with advanced ingredients from leading labs in South Korea,
-            France, Spain, and South Africa. The same products our estheticians
-            trust in every treatment.
+            Clinical-grade formulations from leading labs in South Korea,
+            France, Spain, and South Africa. The same products our estheticians trust in every treatment.
           </p>
         </div>
       </section>
@@ -69,16 +68,16 @@ export default function ProductsPage() {
       {/* Products Grid */}
       <section className="section-padding bg-background">
         <div className="container-premium">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
             {products.map((product) => (
               <a
                 key={product.name}
                 href={product.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-xl overflow-hidden card-hover group cursor-pointer"
+                className="group cursor-pointer"
               >
-                <div className="relative aspect-square bg-cream overflow-hidden">
+                <div className="relative aspect-square bg-white rounded-xl overflow-hidden mb-4">
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -87,24 +86,22 @@ export default function ProductsPage() {
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="text-[10px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-white/90 text-warm-gray">
+                    <span className="text-[10px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-cream text-warm-gray">
                       {product.category}
                     </span>
                   </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-[family-name:var(--font-heading)] text-base mb-1 leading-tight">
-                    {product.name}
-                  </h3>
-                  {product.size && (
-                    <p className="text-xs text-warm-gray-light mb-2">
-                      {product.size}
-                    </p>
-                  )}
-                  <p className="text-lg font-[family-name:var(--font-heading)] font-semibold text-charcoal">
-                    {product.price}
+                <h3 className="font-[family-name:var(--font-heading)] text-base mb-1 leading-tight group-hover:text-sage-dark transition-colors">
+                  {product.name}
+                </h3>
+                {product.size && (
+                  <p className="text-xs text-warm-gray-light mb-1">
+                    {product.size}
                   </p>
-                </div>
+                )}
+                <p className="text-lg font-[family-name:var(--font-heading)] font-semibold text-charcoal">
+                  {product.price}
+                </p>
               </a>
             ))}
           </div>
