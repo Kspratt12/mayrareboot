@@ -61,10 +61,10 @@ const featuredTreatments = [
 ];
 
 const featuredProducts = [
-  { name: "Caviar Skin Cream", size: "50ml / 1.69oz", price: "$85", image: "/skin-balancing-toner.png" },
-  { name: "Fermented Fluid", size: "50ml / 1.69oz", price: "$90", image: "/skin-balancing-toner.png" },
-  { name: "TP Sun Cream SPF 50", size: "50ml", price: "$60", image: "/skin-balancing-toner.png" },
-  { name: "B5 Gel Hydration", size: "30ml / 1oz", price: "$60", image: "/skin-balancing-toner.png" },
+  { name: "Caviar Skin Cream", size: "50ml / 1.69oz", price: "$85", image: "https://static.wixstatic.com/media/8e64c2_21b81d341e8f4f738b3ce2ad4c4f2dfa~mv2.jpg/v1/fit/w_800,h_800,q_90/file.jpg" },
+  { name: "Fermented Fluid", size: "50ml / 1.69oz", price: "$90", image: "https://static.wixstatic.com/media/8e64c2_14d9813713104ef9aa5696870727fc3d~mv2.jpg/v1/fit/w_800,h_800,q_90/file.jpg" },
+  { name: "Regenon Serum", size: "50ml / 1.69oz", price: "$93", image: "https://static.wixstatic.com/media/8e64c2_18b6b164f84c4e4c8dfa73b620d85931~mv2.jpg/v1/fit/w_800,h_800,q_90/file.jpg" },
+  { name: "B5 Gel Hydration", size: "30ml / 1oz", price: "$60", image: "https://static.wixstatic.com/media/8e64c2_7cb234ed947340bb9cfa20c64d618433~mv2.jpg/v1/fit/w_800,h_800,q_90/file.jpg" },
 ];
 
 const reviews = [
@@ -556,19 +556,19 @@ export default function HomePage() {
               {
                 name: "Mayra",
                 title: "Certified Esthetician / Beauty Therapist / Educator",
-                image: "/staff.png",
+                image: "/mayra-main.png",
                 bio: "Founder and lead esthetician with international training from Hong Kong. Specializes in blending Asian and Western techniques for corrective and holistic skincare.",
               },
               {
                 name: "Ezra",
                 title: "Certified Esthetician / Beauty Therapist",
-                image: "/staff-2.png",
+                image: "/ezra.png",
                 bio: "Expert in advanced facial manipulation techniques with a corrective and holistic approach. Known for thorough, gentle extractions and personalized care.",
               },
               {
                 name: "Zoe",
                 title: "Certified Esthetician / Beauty Therapist",
-                image: "/staff-3.png",
+                image: "/zoe.png",
                 bio: "Specializes in facial treatments and skin wellness with a focus on the connection between skin vitality and overall health.",
               },
             ].map((member) => (

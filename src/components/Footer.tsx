@@ -27,13 +27,15 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <Image
-                src="/logo.png"
-                alt="Skin Reboot Spa Clinic"
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain brightness-0 invert opacity-90"
-              />
+              <div className="w-10 h-10 rounded-full overflow-hidden relative bg-white/10">
+                <Image
+                  src="/logo.png"
+                  alt="Skin Reboot Spa Clinic"
+                  width={120}
+                  height={120}
+                  className="absolute top-[5%] left-[5%] w-[90%] h-[75%] object-cover brightness-0 invert opacity-90"
+                />
+              </div>
               <div>
                 <span className="font-[family-name:var(--font-heading)] text-xl font-medium text-white tracking-wide">
                   Skin Reboot

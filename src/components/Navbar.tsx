@@ -59,13 +59,15 @@ export default function Navbar() {
         <nav className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
-            <Image
-              src="/logo.png"
-              alt="Skin Reboot Spa Clinic"
-              width={48}
-              height={48}
-              className="w-10 h-10 md:w-12 md:h-12 object-contain mix-blend-multiply"
-            />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden relative">
+              <Image
+                src="/logo.png"
+                alt="Skin Reboot Spa Clinic"
+                width={120}
+                height={120}
+                className="absolute top-[5%] left-[5%] w-[90%] h-[75%] object-cover mix-blend-multiply"
+              />
+            </div>
             <div className="hidden sm:block">
               <span className="font-[family-name:var(--font-heading)] text-xl md:text-2xl font-medium text-charcoal tracking-wide">
                 Skin Reboot
