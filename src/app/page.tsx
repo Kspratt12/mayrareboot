@@ -61,10 +61,10 @@ const featuredTreatments = [
 ];
 
 const featuredProducts = [
-  { name: "Caviar Skin Cream", size: "50ml / 1.69oz", price: "$85", image: "https://static.wixstatic.com/media/8e64c2_21b81d341e8f4f738b3ce2ad4c4f2dfa~mv2.jpg/v1/fit/w_800,h_800,q_90/file.jpg" },
-  { name: "Fermented Fluid", size: "50ml / 1.69oz", price: "$90", image: "https://static.wixstatic.com/media/8e64c2_14d9813713104ef9aa5696870727fc3d~mv2.jpg/v1/fit/w_800,h_800,q_90/file.jpg" },
-  { name: "Regenon Serum", size: "50ml / 1.69oz", price: "$93", image: "https://static.wixstatic.com/media/8e64c2_18b6b164f84c4e4c8dfa73b620d85931~mv2.jpg/v1/fit/w_800,h_800,q_90/file.jpg" },
-  { name: "B5 Gel Hydration", size: "30ml / 1oz", price: "$60", image: "https://static.wixstatic.com/media/8e64c2_7cb234ed947340bb9cfa20c64d618433~mv2.jpg/v1/fit/w_800,h_800,q_90/file.jpg" },
+  { name: "Caviar Skin Cream", size: "50ml / 1.69oz", price: "$85", image: "https://static.wixstatic.com/media/8e64c2_21b81d341e8f4f738b3ce2ad4c4f2dfa~mv2.jpg/v1/fit/w_1080,h_1080,q_90/file.jpg" },
+  { name: "Fermented Fluid", size: "50ml / 1.69oz", price: "$90", image: "https://static.wixstatic.com/media/8e64c2_14d9813713104ef9aa5696870727fc3d~mv2.jpg/v1/fit/w_1080,h_1080,q_90/file.jpg" },
+  { name: "Regenon Serum", size: "50ml / 1.69oz", price: "$93", image: "https://static.wixstatic.com/media/8e64c2_18b6b164f84c4e4c8dfa73b620d85931~mv2.jpg/v1/fit/w_1080,h_1080,q_90/file.jpg" },
+  { name: "B5 Gel Hydration", size: "30ml / 1oz", price: "$60", image: "https://static.wixstatic.com/media/8e64c2_7cb234ed947340bb9cfa20c64d618433~mv2.jpg/v1/fit/w_1080,h_1080,q_90/file.jpg" },
 ];
 
 const reviews = [
