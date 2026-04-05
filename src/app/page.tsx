@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import VideoShowcase from "@/components/VideoShowcase";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const serviceCategories = [
   {
@@ -238,6 +239,7 @@ export default function HomePage() {
       {/* ============================================ */}
       <section className="section-padding bg-background">
         <div className="container-premium">
+          <ScrollReveal>
           <div className="text-center mb-16">
             <p className="overline mb-4">What We Offer</p>
             <h2 className="font-[family-name:var(--font-heading)]">
@@ -245,6 +247,7 @@ export default function HomePage() {
             </h2>
             <div className="divider-sage mx-auto mt-6" />
           </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {serviceCategories.map((service) => (
