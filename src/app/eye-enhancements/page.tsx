@@ -67,7 +67,7 @@ export default function EyeEnhancementsPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/Eyebrow-Tinting.png"
+            src="/spa-clinic.png"
             alt="Eye enhancements at Skin Reboot"
             fill
             priority

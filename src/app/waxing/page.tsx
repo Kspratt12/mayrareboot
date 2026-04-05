@@ -52,7 +52,7 @@ export default function WaxingPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/Eyelash-Tinting.png"
+            src="/room-dark.png"
             alt="Professional waxing at Skin Reboot"
             fill
             priority

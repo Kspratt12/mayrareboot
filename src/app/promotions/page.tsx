@@ -15,7 +15,7 @@ export default function PromotionsPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/front-office-full-2.png"
+            src="/front-office-full.png"
             alt="Skin Reboot Spa Clinic"
             fill
             priority
