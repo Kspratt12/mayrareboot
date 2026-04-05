@@ -158,72 +158,65 @@ export default function HomePage() {
       {/* ============================================ */}
       {/* 2. QUICK BOOKING STRIP */}
       {/* ============================================ */}
-      <section className="relative bg-charcoal py-10 md:py-12 overflow-hidden">
-        {/* Subtle gradient accent */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-champagne/40 to-transparent" />
+      <section className="bg-cream py-10 md:py-12">
+        <div className="container-premium">
+          {/* Top row: heading + CTA */}
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl">
+                Book Your Service
+              </h2>
+              <p className="text-sm text-warm-gray mt-1">Select a category to explore treatments</p>
+            </div>
+            <a
+              href="https://mayrasalonga.glossgenius.com/services"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-champagne shrink-0 text-center"
+            >
+              Book Now
+            </a>
+          </div>
 
-        <div className="container-premium relative z-10">
-          {/* Main booking card */}
-          <div className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-sm border border-white/[0.08] rounded-2xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-
-            {/* Top row: heading + CTA */}
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-              <div>
-                <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl !text-white">
-                  Book Your Service
-                </h2>
-                <p className="text-sm text-white/50 mt-1">Select a category to explore treatments</p>
-              </div>
-              <a
-                href="https://mayrasalonga.glossgenius.com/services"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-champagne shrink-0 text-center"
+          {/* Service cards grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: "Facials", href: "/facials", from: "$150", count: "12 treatments" },
+              { label: "Body Treatments", href: "/body-treatments", from: "$110", count: "5 treatments" },
+              { label: "Eye Enhancements", href: "/eye-enhancements", from: "$25", count: "5 services" },
+              { label: "Waxing", href: "/waxing", from: "$10", count: "Full menu" },
+            ].map((svc) => (
+              <Link
+                key={svc.label}
+                href={svc.href}
+                className="group bg-white rounded-xl p-5 border border-stone/30 hover:border-champagne/50 hover:shadow-lg transition-all duration-300"
               >
-                Book Now
-              </a>
-            </div>
+                <p className="text-base font-semibold text-charcoal group-hover:text-champagne-dark transition-colors mb-1">
+                  {svc.label}
+                </p>
+                <p className="text-xs text-warm-gray-light">{svc.count}</p>
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-lg font-[family-name:var(--font-heading)] font-semibold text-champagne-dark">
+                    {svc.from}
+                  </span>
+                  <svg className="w-4 h-4 text-stone-dark group-hover:text-champagne group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
 
-            {/* Service cards grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-              {[
-                { label: "Facials", href: "/facials", from: "$150", count: "12 treatments" },
-                { label: "Body Treatments", href: "/body-treatments", from: "$110", count: "5 treatments" },
-                { label: "Eye Enhancements", href: "/eye-enhancements", from: "$25", count: "5 services" },
-                { label: "Waxing", href: "/waxing", from: "$10", count: "Full menu" },
-              ].map((svc) => (
-                <Link
-                  key={svc.label}
-                  href={svc.href}
-                  className="group relative bg-white/[0.04] hover:bg-white/[0.10] border border-white/[0.08] hover:border-champagne/40 rounded-xl p-5 transition-all duration-300"
-                >
-                  <p className="text-base font-semibold text-white group-hover:text-champagne-light transition-colors mb-1">
-                    {svc.label}
-                  </p>
-                  <p className="text-xs text-white/35">{svc.count}</p>
-                  <div className="flex items-center justify-between mt-4">
-                    <span className="text-lg font-[family-name:var(--font-heading)] font-semibold text-champagne">
-                      {svc.from}
-                    </span>
-                    <svg className="w-4 h-4 text-white/20 group-hover:text-champagne/60 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </div>
-                </Link>
-              ))}
-            </div>
-
-            {/* Trust bar */}
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-8 pt-6 border-t border-white/[0.06]">
-              {[
-                "CIBTAC & ITEC Certified",
-                "5-Star Client Experience",
-                "Award-Winning Clinic",
-                "Products from 6 Countries",
-              ].map((text) => (
-                <span key={text} className="text-[10px] font-medium tracking-[0.15em] uppercase text-white/30">{text}</span>
-              ))}
-            </div>
+          {/* Trust bar */}
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-8 pt-6 border-t border-stone/30">
+            {[
+              "CIBTAC & ITEC Certified",
+              "5-Star Client Experience",
+              "Award-Winning Clinic",
+              "Products from 6 Countries",
+            ].map((text) => (
+              <span key={text} className="text-[10px] font-medium tracking-[0.15em] uppercase text-warm-gray-light">{text}</span>
+            ))}
           </div>
         </div>
       </section>
